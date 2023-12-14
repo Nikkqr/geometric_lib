@@ -5,28 +5,22 @@ from triangle import perimeter
 class TriangleTestCase(unittest.TestCase):
 
     def test_triangle_area_correct(self):
-        res = area(13, 24)
-        self.assertEqual(res, 156)
+        self.assertEqual(area(4, 2), (4 * 2) / 2)
 
     def test_triangle_area_wrong(self):
-        res = area(-23, 124)
-        self.assertRaises(res, Exception)
+        self.assertRaises(Exception, area, -2, 2)
 
     def test_triangle_area_null(self):
-        res = area(0, 2)
-        self.assertEqual(res, 0)
+        self.assertEqual(area(0, 0), 0)
 
     def test_triangle_perimeter_correct(self):
-        res = perimeter(2, 4, 6)
-        self.assertEqual(res, 12)
+        self.assertEqual(perimeter(1, 2, 3), 1 + 2 + 3)
 
     def test_triangle_perimeter_wrong(self):
-        res = perimeter(12, -19, 23)
-        self.assertRaises(res, Exception)
+        self.assertRaises(Exception, perimeter, -2, 2, -1)
 
     def test_triangle_perimeter_null(self):
-        res = perimeter(0, 3 , 9)
-        self.assertEqual(res, 12)
+        self.assertEqual(perimeter(0, 0, 0), 0)
         
 if __name__ == '__main__':
     unittest.main()
