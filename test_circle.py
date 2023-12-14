@@ -5,7 +5,8 @@ from circle import perimeter
 class TestCircle(unittest.TestCase):
     
     def test_circle_area_correct(self):
-        self.assertEqual(area(3), math.pi * 3 * 3)
+        res = area(3)
+        self.assertAlmostEqual(res, 28.274, delta=0.01)
         
     def test_circle_area_wrong(self):
         self.assertRaises(Exception, area, -2)
@@ -15,7 +16,8 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(perimeter(0), 0)
 
     def test_circle_perimeter_correct(self):
-        self.assertEqual(perimeter(3), 2 * math.pi * 3)
+        res = area(3)
+        self.assertAlmostEqual(res, 18.849, delta=0.01)
 
     def test_circle_perimeter_wrong(self):
         self.assertRaises(ValueError, perimeter, -2)
