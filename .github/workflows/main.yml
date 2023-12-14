@@ -2,7 +2,7 @@ name: CI/CD
 on:
   push:
     branches:
-      - main(все ветки, которые были в лабах)
+      - main
       - tests_408338
       - CI/CD_408338
   pull_request:
